@@ -21,9 +21,11 @@ class _LoginPageState extends State<LoginPage> {
   bool btnProcurar = true;
   final _tUser = TextEditingController();
   final _tPassword = TextEditingController();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text('Login'),
       ),
@@ -55,7 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                                   })
                             ]),
                       ),
-                      FormLogin(tUser: _tUser, tPassword: _tPassword),
+                      FormLogin(
+                        tUser: _tUser,
+                        tPassword: _tPassword,
+                        scaffoldKey: _scaffoldKey,
+                      ),
                     ],
                   ),
                 ),
