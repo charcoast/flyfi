@@ -12,7 +12,7 @@ import 'package:flyfi/widgets/formlogin_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
-
+  static const routeName = '/login';
   @override
   _LoginPageState createState() => _LoginPageState();
 }

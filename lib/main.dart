@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       routes: {
-        '/login': (context) => LoginPage(),
-        '/home': (context) => HomePage(title: 'FlyFi'),
-        '/dashboard': (context) => DashboardPage()
+        LoginPage.routeName: (context) => LoginPage(),
+        HomePage.routeName: (context) => HomePage(title: 'FlyFi'),
+        DashboardPage.routeName: (context) => DashboardPage()
       },
     );
   }
